@@ -8,7 +8,7 @@ On `pull_request` annotates the pull request diff with warnings and errors
 
 ![image](./assets/eslint-annotate-action-pr-error-example.png)
 
-On `push` creates a `ESLint Report Analysis` with a summary of errors and warnings, including links to the line numbers of the violations.
+On `push` creates a `ESLint Report Analysis` (check name is customizable) with a summary of errors and warnings, including links to the line numbers of the violations.
 
 ![image](./assets/eslint-annotate-action-push-report-example.png)
 
@@ -63,6 +63,7 @@ jobs:
         uses: ataylorme/eslint-annotate-action@1.1.2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          check-name: ESLint Report # optional, defaults to "ESLint Report Analysis"
           report-json: "eslint_report.json"
       - name: Upload ESLint report
         uses: actions/upload-artifact@v1

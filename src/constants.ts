@@ -26,7 +26,7 @@ export default {
   REPO: github.context.repo.repo,
   PULL_REQUEST: pullRequest,
   PR_NUMBER: getPrNumber(),
-  CHECK_NAME: 'ESLint Report Analysis',
+  CHECK_NAME: core.getInput('check-name') || 'ESLint Report Analysis',
   GITHUB_WORKSPACE: process.env.GITHUB_WORKSPACE,
   TOKEN: token,
   OCTOKIT: octokit,
