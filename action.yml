@@ -5,8 +5,9 @@ inputs:
     description: "Token used to interact with the Github API."
     required: true
   check-name:
-    description: "optional, defaults to "ESLint Report Analysis"
+    description: "optional, defaults to 'ESLint Report Analysis'."
     required: false
+    default: 'ESLint Report Analysis'
   report-json:
     description: "ESLint report file in JSON format."
     default: "eslint_report.json"
